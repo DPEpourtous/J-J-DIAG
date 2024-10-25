@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert en Diagnostic DPE | Votre Partenaire de Confiance</title>
+    <meta name="description" content="J&J DIAG - Expert en diagnostic DPE à Jouy-le-Moutier. Services professionnels de diagnostic de performance énergétique pour vente et location en Île-de-France">
+    <title>J&J DIAG | Expert en Diagnostic DPE à Jouy-le-Moutier</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #2E7D32;
@@ -119,6 +121,30 @@
             margin-bottom: 1rem;
         }
 
+        .service-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .service-card ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-card ul li:before {
+            content: "✓";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
         /* News Section */
         .news-section {
             background: var(--light-gray);
@@ -156,6 +182,35 @@
             padding: 0 20px;
         }
 
+        .contact-info {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .contact-details h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details a,
+        .footer-section a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-details a:hover,
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
         .contact form {
             display: grid;
             gap: 1rem;
@@ -182,6 +237,9 @@
             cursor: pointer;
             font-weight: 500;
             transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
         }
 
         .btn:hover {
@@ -205,6 +263,7 @@
         .badge i {
             font-size: 2rem;
             color: var(--primary-color);
+            margin-bottom: 1rem;
         }
 
         /* Footer */
@@ -235,9 +294,10 @@
             margin-bottom: 0.5rem;
         }
 
-        .footer-section a {
-            color: white;
-            text-decoration: none;
+        .footer-section i {
+            width: 20px;
+            margin-right: 10px;
+            color: var(--accent-color);
         }
 
         .copyright {
@@ -257,13 +317,13 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header-content">
             <div class="logo">
-                <h1>ExpertDPE</h1>
+                <h1>J&J DIAG</h1>
             </div>
             <nav class="nav-links">
                 <a href="#services">Services</a>
@@ -275,8 +335,8 @@
     </header>
 
     <section class="hero">
-        <h2>Expert en Diagnostic de Performance Énergétique</h2>
-        <p>Des diagnostics précis et professionnels pour votre bien immobilier</p>
+        <h2>J&J DIAG - Expert en Diagnostic de Performance Énergétique</h2>
+        <p>Votre expert DPE de confiance à Jouy-le-Moutier et en Île-de-France</p>
         <a href="#contact" class="btn">Demander un devis gratuit</a>
     </section>
 
@@ -342,18 +402,20 @@
         </div>
     </section>
 
-    <section id="actualites" class="news-section">
-        <div class="news-container">
-            <h2>Actualités DPE</h2>
-            <div class="news-grid">
-                <!-- Actualités existantes... -->
-            </div>
-        </div>
-    </section>
-
     <section id="contact" class="contact">
         <h2>Demande de Devis Gratuit</h2>
-        <form id="contact-form">
+        <div class="contact-info">
+            <div class="contact-details">
+                <h3>Nos Coordonnées</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 8 rue Maurice Ravel, 95280 Jouy-le-Moutier</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:0763660409">07 63 66 04 09</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:jawad.padid@hotmail.fr">jawad.padid@hotmail.fr</a></p>
+                <p><i class="fas fa-clock"></i> Du lundi au samedi, de 8h à 19h</p>
+            </div>
+        </div>
+        <form id="contact-form" action="https://formspree.io/f/votre_id_formspree" method="POST">
+            <input type="hidden" name="_subject" value="Nouvelle demande de contact J&J DIAG">
+            <input type="hidden" name="_replyto" value="jawad.padid@hotmail.fr">
             <div class="form-group">
                 <label for="name">Nom complet</label>
                 <input type="text" id="name" name="name" required>
@@ -387,17 +449,21 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Tél : 01 23 45 67 89</p>
-                <p>Email : contact@expertdpe.fr</p>
-                <p>Adresse : 123 rue du Diagnostic, 75000 Paris</p>
+                <p><i class="fas fa-map-marker-alt"></i> 8 rue Maurice Ravel</p>
+                <p>95280 Jouy-le-Moutier</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:0763660409">07 63 66 04 09</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:jawad.padid@hotmail.fr">jawad.padid@hotmail.fr</a></p>
             </div>
             <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#dpe-vente">DPE Vente</a></li>
-                    <li><a href="#dpe-location">DPE Location</a></li>
-                    <li><a href="#dpe-copropriete">DPE Copropriété</a></li>
-                </ul>
+                <h3>Horaires</h3>
+                <p>Lundi - Samedi</p>
+                <p>8h00 - 19h00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Zone d'intervention</h3>
+                <p>Jouy-le-Moutier</p>
+                <p>Val d'Oise (95)</p>
+                <p>Île-de-France</p>
             </div>
             <div class="footer-section">
                 <h3>Informations</h3>
@@ -409,19 +475,17 @@
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2024 ExpertDPE - Tous droits réservés</p>
+            <p>&copy; 2024 J&J DIAG - Tous droits réservés</p>
         </div>
     </footer>
 
     <script>
-        // Gestion du formulaire de contact
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Ici, ajoutez votre logique d'envoi de formulaire
             alert('Merci pour votre demande. Nous vous contacterons dans les plus brefs délais.');
+            this.reset();
         });
 
-        // Animation smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
