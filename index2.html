@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="J&J DIAG - Expert en diagnostic DPE à Jouy-le-Moutier. Services professionnels de diagnostic de performance énergétique pour vente et location en Île-de-France">
+    <title>J&J DIAG | Expert en Diagnostic DPE à Jouy-le-Moutier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Tous les styles CSS précédents */
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #4CAF50;
+            --accent-color: #81C784;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Ajout des nouveaux styles pour les liens email */
+        .contact-details a[href^="mailto:"],
+        .footer-section a[href^="mailto:"] {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-details a[href^="mailto:"]:hover,
+        .footer-section a[href^="mailto:"]:hover {
+            text-decoration: underline;
+            color: var(--secondary-color);
+        }
+
+        /* Style pour le message de confirmation du formulaire */
+        .form-message {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: var(--border-radius);
+            display: none;
+        }
+
+        .form-message.success {
+            background-color: #DFF0D8;
+            color: #3C763D;
+            border: 1px solid #D6E9C6;
+            display: block;
+        }
+
+        .form-message.error {
+            background-color: #F2DEDE;
+            color: #A94442;
+            border: 1px solid #EBCCD1;
+            display: block;
+        }
+
+        /* Ajoutez ici tous les autres styles CSS précédents */
+    </style>
+</head>
+<body>
+    <!-- Header et Navigation -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>J&J DIAG</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#actualites">Actualités</a>
+                <a href="#contact">Contact</a>
+                <a href="#tarifs">Tarifs</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero">
+        <h2>J&J DIAG - Expert en Diagnostic de Performance Énergétique</h2>
+        <p>Votre expert DPE de confiance à Jouy-le-Moutier et en Île-de-France</p>
+        <a href="#contact" class="btn">Demander un devis gratuit</a>
+    </section>
+
+    <!-- Badges de confiance -->
+    <!-- Insérez ici la section trust-badges précédente -->
+
+    <!-- Services -->
+    <!-- Insérez ici la section services précédente -->
+
+    <!-- Actualités -->
+    <!-- Insérez ici la section actualités précédente -->
+
+    <!-- Section Contact avec le nouveau formulaire -->
+    <section id="contact" class="contact">
+        <h2>Demande de Devis Gratuit</h2>
+        <div class="contact-info">
+            <div class="contact-details">
+                <h3>Nos Coordonnées</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 8 rue Maurice Ravel, 95280 Jouy-le-Moutier</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:0763660409">07 63 66 04 09</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:jawad.padid@hotmail.fr">jawad.padid@hotmail.fr</a></p>
+                <p><i class="fas fa-clock"></i> Du lundi au samedi, de 8h à 19h</p>
+            </div>
+        </div>
+        <div id="form-message" class="form-message"></div>
+        <form id="contact-form" action="https://formspree.io/f/votre_id_formspree" method="POST">
+            <input type="hidden" name="_subject" value="Nouvelle demande de contact J&J DIAG">
+            <input type="hidden" name="_replyto" value="jawad.padid@hotmail.fr">
+            
+            <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Type de service</label>
+                <select id="service" name="service" required>
+                    <option value="">Choisissez un service</option>
+                    <option value="dpe-vente">DPE Vente</option>
+                    <option value="dpe-location">DPE Location</option>
+                    <option value="dpe-copropriete">DPE Copropriété</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn">Envoyer la demande</button>
+        </form>
+    </section>
+
+    <!-- Footer avec les coordonnées mises à jour -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 8 rue Maurice Ravel</p>
+                <p>95280 Jouy-le-Moutier</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:0763660409">07 63 66 04 09</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:jawad.padid@hotmail.fr">jawad.padid@hotmail.fr</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>Lundi - Samedi</p>
+                <p>8h00 - 19h00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Zone d'intervention</h3>
+                <p>Jouy-le-Moutier</p>
+                <p>Val d'Oise (95)</p>
+                <p>Île-de-France</p>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#mentions-legales">Mentions légales</a></li>
+                    <li><a href="#cgv">CGV</a></li>
+                    <li><a href="#politique-confidentialite">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 J&J DIAG - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion du formulaire de contact
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            
+            // Simulation d'envoi (à remplacer par votre logique d'envoi réelle)
+            setTimeout(() => {
+                formMessage.className = 'form-message success';
+                formMessage.textContent = 'Merci pour votre message. Nous vous contacterons dans les plus brefs délais.';
+                this.reset();
+
+                // Cache le message après 5 secondes
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }, 1000);
+        });
+
+        // Animation smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
